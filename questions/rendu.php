@@ -116,21 +116,12 @@ include "../connexion.php" ;
 
                                             <td>
 
-                                                <div class="custom-control custom-radio custom-control-inline">
+                                                <div >
 
-                                                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-
-                                                    <label class="custom-control-label" for="customRadioInline1">oui</label>
+                                                <input type="text" name="repond" class="form-control" placeholder="Saisir la repons" required>
 
                                                 </div>
 
-                                                <div class="custom-control custom-radio custom-control-inline">
-
-                                                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-
-                                                    <label class="custom-control-label" for="customRadioInline2">non</label>
-
-                                                </div>
 
                                             </td>
 

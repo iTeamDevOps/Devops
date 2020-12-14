@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2020 at 08:08 PM
+-- Generation Time: Dec 13, 2020 at 02:20 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -68,7 +68,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `nom`, `prenom`, `email`, `telephon`, `sexe`, `ville`, `langue`, `pass`, `matricule`, `date`, `hopitale`, `role`) VALUES
-(1, 'hedi', 'naouara', 'hedi.1997@live.fr', 696, 'Male', 'KORBA', 'arab', 'az', NULL, NULL, NULL, 'patient');
+(1, 'hedi', 'naouara', 'hedi.1997@live.fr', 696, 'Male', 'KORBA', 'arab', 'az', NULL, NULL, NULL, 'patient'),
+(2, 'saadia ', 'borgou', 'hedi.1997@live.fr', 24356, 'Female', 'tunis', 'fr', '21', NULL, NULL, NULL, 'patient'),
+(3, 'Bailey', 'borgou', 'cedouariel@gmail.com', 345678, '', 'tunis', 'arabe', '123456', NULL, NULL, NULL, 'patient');
 
 --
 -- Indexes for dumped tables
@@ -100,7 +102,7 @@ ALTER TABLE `question`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

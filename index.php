@@ -54,7 +54,7 @@ include "connexion.php" ;
 
 
             <div class="card mb-3 mx-5">
-  <img src="images/covid19.gif" class="card-img-top" alt="..."  style="width:6%;height:90px;">
+  <img src="images/img.jpg" class="card-img-top" alt="..."  style="width:100%;height:10%;">
   <div class="card-body">
     <p class="card-text">
     Les coronavirus (CoV) sont une grande famille de virus qui provoquent des maladies qui vont du simple rhume à des maladies plus graves telles 
@@ -81,20 +81,17 @@ include "connexion.php" ;
 
 <div class="card-deck mx-4">
   <div class="card">
-    <img src="\project\images\D‎.jpg" class="card-img-top" alt="..." style="width:100px;height:85px;"   >
+    <img src="\project\images\D‎.jpg" class="card-img-top" alt="..." style="width:300px;height:85px;"   >
     <div class="card-body">
       <h5 class="card-title">Déclaration commune de l’OMS et de l’ICMRA sur la nécessité d’une meilleure ‎harmonisation
        réglementaire mondiale sur les médicaments et les vaccins ‎contre la COVID-19‎
 </h5>
       <p class="card-text">Compte tenu du grand nombre de vaccins et de traitements contre la COVID-19 en cours de développement, et de leur déploiement vraisemblablement imminent, l’Organisation mondiale de la Santé (OMS) et la International Coalition of Medicines Regulatory Authorities (ICMRA) ont uni leurs forces afin de faire respecter et de promouvoir les pratiques réglementaires fondées sur des données probantes les plus rigoureuses en appuyant l’harmonisation des processus réglementaires dans tous les pays. Comme dans d’autres domaines de lutte contre la pandémie, la coopération multilatérale entre les autorités réglementaires sera essentielle pour assurer des règles du jeu équitables, l’innocuité, l’efficacité et la qualité assurée des vaccins et des médicaments contre la COVID-19, et pour que tous les pays puissent bénéficier de ces produits de manière équitable et en même temps. Dans cette déclaration, les organisations s’engagent à entreprendre une série de mesures en ce sens. 
-
- 
-
-L’ICMRA et l’OMS continuent d’unir leurs forces afin de faire face aux enjeux de santé mondiale sans précédent liés à la pandémie de COVID-19, touchant tant de gens dans le monde. 
-La collaboration permet de mieux aborder ces enjeux et d’assurer ainsi le respect des normes scientifiques rigoureuses d’examen et de surveillance qui sont en vigueur, tout en permettant aux patients d’avoir accès à des produits médicaux efficaces aussitôt que possible.
-Les autorités réglementaires pour les produits médicaux, notamment les médicaments et les vaccins, ont la responsabilité d’autoriser des produits ayant fait l’objet d’un contrôle de la qualité, l’innocuité et l’efficacité en se fondant sur des données solides et fiables.
-L’approbation réglementaire doit être fondée sur une évaluation scientifique indépendante de l'équilibre entre les avantages et les risques.
-Il est préférable de collecter les données robustes et fiables sur l’efficacité et la sécurité visant à appuyer l’autorisation de mise en marché des médicaments et des vaccins dans le cadre d'essais cliniques contrôlés aléatoires pour contrôler le biais, satisfaire aux normes de bonnes pratiques cliniques, respecter les droits, l’autonomie et la sécurité des participants d’essais cliniques, et permettre des vérifications.
+    L’ICMRA et l’OMS continuent d’unir leurs forces afin de faire face aux enjeux de santé mondiale sans précédent liés à la pandémie de COVID-19, touchant tant de gens dans le monde. 
+     La collaboration permet de mieux aborder ces enjeux et d’assurer ainsi le respect des normes scientifiques rigoureuses d’examen et de surveillance qui sont en vigueur, tout en permettant aux patients d’avoir accès à des produits médicaux efficaces aussitôt que possible.
+     Les autorités réglementaires pour les produits médicaux, notamment les médicaments et les vaccins, ont la responsabilité d’autoriser des produits ayant fait l’objet d’un contrôle de la qualité, l’innocuité et l’efficacité en se fondant sur des données solides et fiables.
+     L’approbation réglementaire doit être fondée sur une évaluation scientifique indépendante de l'équilibre entre les avantages et les risques.
+     Il est préférable de collecter les données robustes et fiables sur l’efficacité et la sécurité visant à appuyer l’autorisation de mise en marché des médicaments et des vaccins dans le cadre d'essais cliniques contrôlés aléatoires pour contrôler le biais, satisfaire aux normes de bonnes pratiques cliniques, respecter les droits, l’autonomie et la sécurité des participants d’essais cliniques, et permettre des vérifications.
 </p>
     </div>
     <div class="card-footer">
@@ -102,7 +99,7 @@ Il est préférable de collecter les données robustes et fiables sur l’effica
     </div>
   </div>
   <div class="card">
-    <img src="\project\images\L.jpg" class="card-img-top" alt="..."style="width:300px;height:180px;">
+    <img src="\project\images\L.jpg" class="card-img-top" alt="..."style="width:500px;height:180px;">
     <div class="card-body">
       <h5 class="card-title">L’Assemblée mondiale de la Santé fixe le cap pour combattre la COVID-19 et répondre aux priorités sanitaires mondiales</h5>
       <p class="card-text">Alors que les dirigeants de la santé s’apprêtent à participer de façon virtuelle à la reprise des débats de la Soixante-Treizième Assemblée mondiale de la Santé, l’OMS a trois messages pour le monde. 
@@ -131,7 +128,7 @@ La reprise de la session sera l’occasion d’examiner un plan de lutte contre 
     </div>
   </div>
   <div class="card">
-    <img src="\project\images\Alors.jpg" class="card-img-top" alt="..."style="width:100px;height:85px;">
+    <img src="\project\images\Alors.jpg" class="card-img-top" alt="..."style="width:100%;height:85px;">
     <div class="card-body">
       <h5 class="card-title">Alors que la propagation de la COVID-19 accélère, le Comité d’urgence du RSI appelle à se concentrer sur les mesures qui ont un effet</h5>
       <p class="card-text">Le Comité d’urgence concernant la COVID-19 s’est réuni le 29 octobre afin d’examiner la situation et les progrès réalisés dans la mise en œuvre des recommandations provisoires. Il estime que la pandémie reste une urgence de santé publique de portée internationale et appelle à concentrer les efforts de riposte sur les enseignements tirés et sur des éléments scientifiques solides. 

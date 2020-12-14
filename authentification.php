@@ -17,11 +17,11 @@ if (isset($_POST['log'])) {
       if ($row['role'] == "patient") {
         $_SESSION['user'] = $u;
        
-        echo "<script>alert('bonjour patient ')</script>";
+        header("Location: /project/utilisateur/index.php");
       
     }else if ($row['role'] == "medecin") {
        $_SESSION['user'] = $u;
-       echo "<script>alert('bonjour medecin ')</script>";
+       header("Location: /project/medecin/index.php");
    
     }else{
       echo "<script>alert('User Not found ')</script>";
