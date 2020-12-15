@@ -1,5 +1,5 @@
 <?php
-include "../connexion.php" ;
+    include "../connexion.php" ;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,9 +26,7 @@ include "../connexion.php" ;
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Rendu <span class="sr-only">(current)</span></a>
-                    </li>
+                   
                 </ul>
                 <div action="../authentification.php" class="form-inline my-2 my-lg-0">
                     <a class="btn btn-outline-success btn-sm" href="../authentification.php" role="button"> Authentification </a>
@@ -45,18 +43,29 @@ include "../connexion.php" ;
                             <div class="card text-left">
 
                                 <div class="card-header">
-                                Remplir votre inscription
+                                    Remplir votre inscription
                                 </div>
+
+                    <script>
+                        function verif() {
+                                if ((document.getElementById("pass1").value) != (document.getElementById("pass2").value)) {
+                                    alert("Les mots de passe ne correspondent pas...");
+                                    document.getElementById("email").focus();
+                                    return false;
+                                }
+                            }
+                    </script>
+
                                 <div class="card-body">
-                            <form class="form-signin" method="post" action="insert.php">
-                                    <div class="form-row">
+                            <form class="form-signin" method="post" onsubmit="return verif()" action="insert.php">
+                                <div class="form-row">
                                     <div class="col-md-6 mb-1">
-                                    <label for="validationDefault01">Nom</label>
-                                    <input type="text" class="form-control" name="nom" id="nom"  required>
+                                        <label for="validationDefault01">Nom</label>
+                                        <input type="text" class="form-control" name="nom" id="nom"  required>
                                     </div>
                                     <div class="col-md-6 mb-1">
-                                    <label for="validationDefault02">Prénom</label>
-                                    <input type="text" class="form-control" name="prenom" id="prenom"  required>
+                                        <label for="validationDefault02">Prénom</label>
+                                        <input type="text" class="form-control" name="prenom" id="prenom"  required>
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -70,12 +79,12 @@ include "../connexion.php" ;
                                         <input type="number" class="form-control" name="telephon" id="telephon" required>
                                     </div>
 
-                                    <div class="custom-control custom-radio mt-5 custom-control-inline">
-                                        <input type="radio" id="homme" name="sexe" value="Male" class="custom-control-input">
-                                        <label class="custom-control-label" for="homme">Homme</label>
+                                    <div class="custom-control custom-radio mt-5 mx-4 custom-control-inline">
+                                        <input type="radio" id="homme" checked name="sexe" value="Male" class="custom-control-input">
+                                        <label class="custom-control-label" for="homme" >Homme</label>
                                     </div>
 
-                                    <div class="custom-control custom-radio mt-5 custom-control-inline">
+                                    <div class="custom-control custom-radio mt-5 mx-2 custom-control-inline">
                                         <input type="radio" id="femme" name="sexe" value="Female"class="custom-control-input">
                                         <label class="custom-control-label" for="femme">Femme</label>
                                     </div>
@@ -83,23 +92,13 @@ include "../connexion.php" ;
 
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
-                                    <label for="validationDefault03">Ville</label>
-                                    <input type="text" class="form-control" id="ville" name="ville" required>
+                                        <label for="validationDefault03">Ville</label>
+                                        <input type="text" class="form-control" id="ville" name="ville" required>
                                     </div>
-                                  
-                                <div class="col-md-3 mb-3">
-                                    <label for="validationDefault05">Langue</label>
-                                    <input type="text" class="form-control" id="langue" name="langue" required>
-                                    </div>
-                                </div>
-                                <div class="form-row">
+                                    
                                     <div class="col-md-6 mb-3">
-                                    <label for="validationDefault01">Mot de passe</label>
-                                    <input type="password" class="form-control" id="pass" name="pass" required>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                    <label for="validationDefault02">Confirmer mot de passe</label>
-                                    <input type="password" class="form-control" id="pass" name="pass"   required>
+                                        <label for="validationDefault05">Langue</label>
+                                        <input type="text" class="form-control" id="langue" name="langue" required>
                                     </div>
                                 </div>
 
@@ -109,7 +108,7 @@ include "../connexion.php" ;
                                         <input type="text" class="form-control" id="matricul" name="matricul"   required>
                                     </div>
                                     <div class="col-md-3 mb-1">
-                                        <label for="validationDefault02">Date</label>
+                                        <label for="validationDefault02">Date de fonction</label>
                                         <input type="date" class="form-control" id="date" name="date"  required>
                                     </div>
                                     <div class="col-md-5 mb-1">
@@ -118,8 +117,18 @@ include "../connexion.php" ;
                                     </div>
                                 </div>
 
-                               
-                                <button class="btn btn-primary" type="submit" name="submit"  value="Add">Confirmer</button>
+                                <div class="form-row mt-2">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationDefault01">Mot de passe</label>
+                                        <input type="password" class="form-control" id="pass1" name="pass1" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationDefault02">Confirmer le mot de passe</label>
+                                        <input type="password" class="form-control" id="pass2" name="pass2"   required>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-primary mt-2" type="submit" name="submit"  value="Add">Confirmer</button>
 
                             </form>
                             

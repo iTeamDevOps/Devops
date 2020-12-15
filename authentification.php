@@ -1,39 +1,46 @@
 <?php
-session_start();
-include "connexion.php";
-if (isset($_POST['log'])) { 
-        $u=$_POST['user'];
-        $p=$_POST['pwd'];
-      
-    if (empty($u)|| empty($p)) {
-  echo "<script>alert('No inputs!! Login field ')</script>";
-    }
-    else{
-        $query = $dbh->query("SELECT * from user where email = '$u' and pass= '$p' Limit 1");
-  
-    if ($query) {
-     
-    foreach($query as $row){
-      if ($row['role'] == "patient") {
-        $_SESSION['user'] = $u;
-       
-        echo "<script>alert('bonjour patient ')</script>";
-      
-    }else if ($row['role'] == "medecin") {
-       $_SESSION['user'] = $u;
-       echo "<script>alert('bonjour medecin ')</script>";
-   
-    }else{
-      echo "<script>alert('User Not found ')</script>";
+        session_start();
+        include "connexion.php";
 
+        if (isset($_POST['log'])) { 
+            
+                $u=$_POST['user'];
+                $p=md5($_POST['pwd']);
+            
+            if (empty($u) || empty($p)) {
+                echo "<script>alert('No inputs!! Login field ')</script>";
+            }else{
+                $query = $dbh->query("SELECT * from user where email = '$u' and pass= '$p' Limit 1")->fetch();
+            
+                if ($query) {
+                    foreach($query as $row){
+                        if ($row['role'] == "patient") {
+                            $_SESSION['user'] = $u;
+                        
+                            echo "<script>alert('bonjour patient ')</script>";
+                            header('location: utilisateur/acceuilUser.php');
+                        
+                        }else if ($row['role'] == "medecin") {
+                            $_SESSION['user'] = $u;
+
+                            echo "<script>alert('bonjour medecin ')</script>";
+                            header('location: medecin/acceuiMed.php');
+
+                        }else if ($row['role'] == "admin") {
+                            $_SESSION['user'] = $u;
+
+                            echo "<script>alert('bonjour admin ')</script>";
+                            header('location: admin/acceuilAd.php');
+                    
+                        }else{
+                            echo "<script>alert('User Not found ')</script>";
+                        }
+                    }
+                }else{
+                    echo "<script>alert('Wrong Data')</script>"; 
+                }
+            }
         }
-     }
-    }else{
-      echo "<script>alert('Wrong Data')</script>";
-        
-        }
-    }
-}
    ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,9 +68,7 @@ if (isset($_POST['log'])) {
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Rendu <span class="sr-only">(current)</span></a>
-                    </li>
+                    
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <button class="btn btn-outline-success btn-sm" type="submit" disabled > Authentification </button>
